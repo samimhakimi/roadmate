@@ -1,22 +1,21 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Services from './components/Services';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";  
+import Footer from "./components/Footer";  
+import Service from "./components/Services";  
+import Contact from "./components/Contact";  
+import About from "./components/About";   
 
-
-function App() {
+export default function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <main style={{ textAlign: "center", padding: "20px" }}>
-      <Services />
-
-
-        <h2>Welcome to My Website</h2>
-        <p>This is a responsive navbar demo.</p>
-      </main>
-      <Footer/>
-    </div>
+      <Routes>
+        <Route path="/" element={<Service />} /> 
+        <Route path="/about" element={<About />} /> 
+        <Route path="/services" element={<Service />} /> 
+        <Route path="/contact" element={<Contact />} /> 
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
-
-export default App;

@@ -1,6 +1,7 @@
 // src/components/Services.js
 import React from 'react';
 import './Services.css'; // Ensure you have the updated CSS
+import Main from './Main';
 
 import tyre from "../assets/images/tyre-repair.png"; // Import the logo image
 
@@ -31,6 +32,7 @@ function Services() {
           </a>
         ))}
       </div>
+      <Main/>
     </section>
   );
 }
