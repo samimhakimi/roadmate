@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logos {
+    width: 200px;
+    height: auto;
+  }
+
+
+.header {
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for all links */
+.nav-menu a:hover {
+    background: #9CEE69; /* Hover background color */
+    color: black; /* Text color on hover */
+    border-radius: 12px;
+    border-color: black;
+}
+
+ 
+
+/* WhatsApp Icon and Text Styling */
+.whatsapp-icon {
+    display: flex;
+    align-items: center;
+    color: #25D366; /* WhatsApp Green */
+    text-decoration: none;
+    font-size: 16px;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+    background: #9CEE69;
+}
+
+.whatsapp-icon:hover {
+    background: #9CEE69; /* Hover background color */
+    color: black; /* Text color on hover */
+    border-radius: 12px;
+}
+
+.whatsapp-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hide Hamburger Button on Larger Screens */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Responsive: Show Hamburger Menu on Small Screens */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        text-align: center; 
+    }
+    .whatsappicon {
+        margin-bottom: -6px;
+        padding-right: 10px;
+
+    }
+
+    .nav-menu.open {
+        display: flex;
+        
+    }
+
+    .nav-menu a {
+        padding: 15px;
+        display: block;
+        font-size: 22px;
+    }
+    
+ 
+    /* WhatsApp Icon and Text on Mobile */
+    .whatsapp-icon {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .whatsapp-text {
+        font-size: 14px;
+    }
+}
+
